@@ -45,3 +45,9 @@ task jenkins_test(type: Test){
         includeTags("jenkins")
     }
 }
+
+task simple1_test(type: Test){
+    useJUnitPlatform{
+        includeTags("simple")
+    }
+}
