@@ -16,9 +16,12 @@ public class RegistrationFormTests extends TestBase {
     @DisplayName("Successful registration")
     void registrationFormTest() {
 
+        step("Open page", () ->{
+            registrationPage.openPage();
+        });
+
         step("Fill form", () -> {
-        registrationPage.openPage()
-                .setFirstName("Mary")
+        registrationPage.setFirstName("Mary")
                 .setLastName("Watson")
                 .setUserEmail("marywatson@gmail.com")
                 .setGender("Female")
