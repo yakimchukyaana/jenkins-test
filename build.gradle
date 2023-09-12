@@ -32,7 +32,8 @@ dependencies {
     testImplementation(
             "com.codeborne:selenide:6.16.1",
             "org.junit.jupiter:junit-jupiter:5.9.2",
-            "io.qameta.allure:allure-selenide:2.23.0"
+            "io.qameta.allure:allure-selenide:2.23.0",
+            "com.github.javafaker:javafaker:1.0.2"
     )
 }
 
@@ -73,5 +74,11 @@ task property_test(type: Test){
 task hello_test(type: Test){
     useJUnitPlatform{
         includeTags("hello")
+    }
+}
+
+task faker_test(type: Test){
+    useJUnitPlatform{
+        includeTags("faker")
     }
 }
